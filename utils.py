@@ -49,7 +49,7 @@ def prepare_counting_model(config: RunConfig):
             model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32").cuda()
         case "clip-count":
             from clip_count.models.clip_count_model import CLIPCount
-            model = CLIPCount.from_pretrained("clip_count/clipcount_pretrained.ckpt", strict=False).cuda()
+            model = CLIPCount.from_pretrained("ozzafar/clip-count-base", strict=False).cuda()
     model.eval()
     return model
 
