@@ -233,7 +233,7 @@ def train(config: RunConfig):
                 prompt = [class_name.split()[-1]]
 
                 with torch.cuda.amp.autocast():
-                    orig_output = counting_model.forward(image, prompt)
+                    orig_output = counting_model(image, prompt)
 
                 scale_factor = extract_clip_count_scale_factor(image_out.detach(), orig_output[0].detach(), yolo, yolo_image_processor, config.yolo_threshold) if config.is_dynamic_scale_factor else config.scale
                 output = torch.sum(orig_output[0] / scale_factor)
