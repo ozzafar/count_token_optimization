@@ -18,7 +18,7 @@ and SD method; and (iii) it provides fine-grained user control. Through assessme
 of the generation of various objects, we demonstrate that our approach significantly
 enhances accuracy.
 >
-<a href="https://arxiv.org/abs/2408.11721"><img src="https://img.shields.io/badge/arXiv-2408.11721-b31b1b.svg" height=30.5></a> <a href="https://ozzafar.github.io/count_token/"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=red" height=30.5></a>
+<a href="https://arxiv.org/abs/2408.11721"><img src="https://img.shields.io/badge/arXiv-2408.11721-b31b1b.svg" height=30.5></a> <a href="https://ozzafar.github.io/count_token/"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=red" height=30.5></a> <a href="https://colab.research.google.com/drive/1ILVrX288kAmbfRXjz5jtVSHbTSDtyZlX?usp=sharing"><img src="https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252" height=30.5></a> 
 
 
 <p align="center">
