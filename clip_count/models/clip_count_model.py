@@ -4,6 +4,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from huggingface_hub import PyTorchModelHubMixin
 
 from clip_count.models.models_crossvit import CrossAttentionBlock, ConvCrossAttentionBlock
 
@@ -13,8 +14,9 @@ from torchvision import transforms
 import einops
 import functools
 import operator
-class CLIPCount(nn.Module):
-    def __init__(self, fim_depth:int=4, 
+
+class CLIPCount(nn.Module, PyTorchModelHubMixin):
+    def __init__(self, fim_depth:int=4,
                  fim_num_heads:int=8,
                  mlp_ratio:float=4., 
                  norm_layer=nn.LayerNorm,
@@ -44,6 +46,9 @@ class CLIPCount(nn.Module):
             unfreeze_vit: whether to fintune all clip vit parameters.
         """
         super().__init__()
+        self.repo_url = "https://github.com/songrise/CLIP-Count/tree/main"
+        self.pipeline_tag = "zero-shot-image-classification"
+        self.license = "mit"
 
         # --------------------------------------------------------------------------
         # MAE encoder specifics
