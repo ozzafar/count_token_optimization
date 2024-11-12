@@ -13,7 +13,12 @@ from torchvision import transforms
 import einops
 import functools
 import operator
-class CLIPCount(nn.Module):
+
+from huggingface_hub import PyTorchModelHubMixin
+
+
+class CLIPCount(nn.Module, PyTorchModelHubMixin,
+                repo_url="https://github.com/songrise/CLIP-Count/tree/main", pipeline_tag="zero-shot-image-classification", license="mit"):
     def __init__(self, fim_depth:int=4, 
                  fim_num_heads:int=8,
                  mlp_ratio:float=4., 

@@ -51,11 +51,11 @@ The code can be easily adapted to other models, if you will to utilize CLIP-COUN
 
 ###### Evaluation
 
-Our evaluation is based both on CLIP-COUNT and YOLO.
+Our evaluation is based both on CLIP-COUNT and YOLOS.
 
 For CLIP-COUNT setup, refer to previous section.
 
-For YOLO setup, please refer to  [YOLOv9 docs](https://docs.ultralytics.com/models/yolov9/).
+For YOLOS setup, please refer to the [Hugging Face docs](https://huggingface.co/docs/transformers/en/model_doc/yolos).
 
 ## Run and Evaluate:
 <p align="center">
